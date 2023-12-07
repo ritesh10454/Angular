@@ -1,0 +1,70 @@
+﻿     .ButtonRightAlign
+    {
+        float:right;
+    }
+     
+    .TextAlign
+    {
+        text-align:left;
+    }         
+        
+    table.dataTable thead tr 
+    {
+        background-color: #007bff;
+        font-size:1.1rem;
+        color:#fff;
+    }   
+    
+     table.dataTable 
+     {
+        margin: 0 !important;
+        font-family: "Calibri"; 
+        font-size:1.1rem;
+    }    
+    .gridButton
+    {
+        font-family: "Calibri"; 
+        font-size:12px;
+    }   
+     
+
+    #loader 
+    {  
+        position: fixed;  
+        left: 0px;  
+        top: 0px;  
+        opacity:0.9;
+        width: 100%;  
+        height: 100%;  
+        z-index: 9999;  
+        background: rgb(201, 201, 201) url('AdminLte/dist/img/waiting.gif') no-repeat 50% 50%;
+    }
+    th, td {
+        white-space: nowrap;
+        font-size:1.1rem;
+    }
+    
+    
+  /*  @media print 
+    {
+        thead { display: table-header-group; margin-top: 10px;position: fixed;}
+        tfoot { display: table-footer-group; margin-bottom : 10px;position: fixed; }
+        tbody { display: table-row-group;}
+
+    } */
+    
+    
+    @media print {
+    thead { display: table-header-group; top: 20mm; height : 20mm !important; }
+    tfoot { display: table-footer-group; bottom : 20mm; height : 50mm !important; margin-bottom:0px;  }
+    tbody { display: table-row-group; }
+    @page :thead { display: none;}  
+    @page :tfoot { display: none; }
+    @page { margin-top: 0; margin-bottom: 0; }
+    }
+
+
+
+
+
+

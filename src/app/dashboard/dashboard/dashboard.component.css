@@ -1,0 +1,26 @@
+.cardHeight
+{
+    min-height: 320px;
+    max-height: 420px;
+}
+
+
+.inner:hover {
+background-color:Black !important;
+}
+
+.newLi
+{
+    color: #0000ff; text-align: left; text-decoration: none; font-size: medium;
+                            font-weight: 500;
+}
+
+.cardRow
+{
+    margin-top: -67px;
+}
+
+.cardHeaderPrimary
+{
+    padding-left: 2px;
+}

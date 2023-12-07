@@ -1,0 +1,255 @@
+﻿/*.empty-header, .empty-footer {
+    height:100px
+}
+
+.header, .footer {
+    position: fixed;
+    height:100px;
+    top: 0;
+}
+
+.footer {
+    bottom:0
+}
+
+#tablePrint.dataTable thead tr 
+{
+    background-color: #007bff;
+    color:#fff;
+}   
+#tablePrint th, #tablePrint td 
+{
+    white-space: nowrap;
+    font-size:12px;
+}
+        
+#tablePrint.dataTable select, #tablePrint.dataTable input[type="text"]
+{
+        font-size:12px;
+        font-family: "Calibri";
+}  
+
+
+.empty-header, .empty-footer {
+height:100px
+}
+.header, .footer {
+position: fixed;
+height:100px;
+top: 0;
+}
+.footer {
+               bottom:0
+} 
+
+      */
+ /*     
+#tablePrint.report-header,  #tablePrint.header-info, #tablePrint.report-footer, #tablePrint.footer-info
+{
+    height: 100px;
+    }    
+
+@page {
+  size: 8.23in 11.66in; 
+  margin: 0.5in 0.5in;
+
+
+  @bottom-right {
+    content: "Page " counter(page) " of " counter(pages);
+  }
+}  */
+ 
+
+.report-content
+{
+    display:table-row-group;
+        page-break-after:always;
+        width:100%;
+  
+}
+.report-header {
+      display:table-header-group;
+      width:100%;
+}
+.report-footer {
+      display:table-footer-group;
+      width:100%;
+}  
+
+
+.imgontd
+{
+    background: url('../Images/Chk.png');
+    background-size:63px;
+    background-repeat:no-repeat;
+    background-position:center;
+     -webkit-print-color-adjust: exact !important;
+}
+
+@media print {
+.report-header {display:block; top: 2mm; height : 20mm !important;position:fixed; width:100% !important;font-size:12px;clear:both; }
+.report-footer {display:block; bottom : 2mm; height : 40mm !important; position:fixed;width:100% !important; font-size:12px;page-break-after:always; page-break-inside: avoid;clear:both; }
+.report-content {display:block;margin-top:30mm;width:100% !important;font-size:12px;position:relative;height:auto;clear:both;}
+@page { margin-top: 0; margin-bottom: 0;font-size:12px;clear:both; }
+body { margin: 5mm;clear:both; }
+.printfont
+{
+ font-family:'Times New Roman'; 
+    }
+}
+
+
+
+/*
+
+@page :thead { display: none;}  
+@page :tfoot { display: none; }
+
+
+@media print
+{
+
+    
+    #tablePrint tfoot.report-footer {
+        bottom:0;
+        left:0;
+        height:10px;
+    }
+    
+    #tablePrint thead.report-header 
+    {
+        top :0;
+    }
+    
+    #tablePrint tbody.report-content 
+    {
+        height:120px;
+        }
+    
+}
+*/
+
+
+
+/* Styles go here */
+
+
+/*
+.page-header, .page-header-space {
+  height: 80px;
+}
+
+.page-footer, .page-footer-space {
+  height: 120px;
+
+}
+
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid black;
+  background: yellow; /
+}
+
+.page-header {
+  position: fixed;
+  top: 0mm;
+  width: 100%;
+  border-bottom: 1px solid black; 
+  background: yellow; 
+}
+
+.page {
+  page-break-after: always;
+}
+
+@page {
+  margin: 2mm
+}
+
+@media print {
+   thead {display: table-header-group;} 
+   tfoot {display: table-footer-group;}
+   
+   button {display: none;}
+   
+   body {margin: 0;}
+} 
+
+
+
+#content {
+    width: 100%;
+}
+#header {
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+}
+#footer {
+    width: 100%;
+    display: block;
+    position: fixed;
+    bottom: 0;
+}
+
+
+@page {
+  margin: 2mm
+}
+
+
+
+ 
+@media print
+{ 
+.header 
+{
+    width:100%;
+    }
+.footer
+{
+    width:100%;
+    }
+    
+ .tblContent
+ {
+     width:100%;
+     }    
+
+    .header {
+      position: fixed;
+      display:table-header-group;
+      top: 0;
+      height:80px;
+    }
+    .footer {
+      position: fixed;
+      display:table-footer-group;
+      bottom: 0;
+      height:120px;
+    }
+      
+    .printDiv
+    {
+        margin-top: 130px;
+        height:600px;
+        background-color:yellow;
+        page-break-inside: avoid;
+    }
+        
+    .innerprintDiv {
+        width:100%x;
+        background-color:lightblue;
+        margin-top: 10px;
+        page-break-inside: avoid;
+    }
+
+            
+     
+}*/
+
+
+   

@@ -1,0 +1,119 @@
+<div class="content-wrapper">
+    <!-- Breadcrumb -->
+    <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2"  id="libreadcrumbItems">
+            <div class="col-sm-6">
+              <h1 class="m-0" id="headingcurrMenu" style="font-size: 1.3rem;" >{{headingMenu}}</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#"  id="lblmainMenu"></a>{{mainMenu}}</li>
+                <li class="breadcrumb-item active">{{currMenu}}</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Breadcrumb -->
+
+      <section class="content">
+        <div class="container-fluid">
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-primary" style="margin-bottom: 5px;">
+                        <div class="card-header">
+                            <h3 class="card-title">{{jrInboxHeader}}</h3>
+                        </div>
+                        <div class="card-body" style="padding: 0;">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-8">
+                                    <input type="hidden" id="hdfempcd" />
+                                    <input type="hidden" id="hdfempnam"/>
+                                    <input type="hidden" id="hdfdept" />
+                                    <input type="hidden" id="hdfdesig"/>
+                                    <input type="hidden" id="hdfDate"/>
+                                </div>
+                                <div class="col-sm-12 col-md-2">
+                                    <div class="form-group row">
+                                        <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">
+                                            Date</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control-plaintext TextAlign" id="txtDate" readonly [value]="txtDate" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-2">
+                                    <div class="form-group row">
+                                        <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">
+                                            Time</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control-plaintext TextAlign" id="txtTime" readonly [value]="currTime" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-primary" style="margin-bottom: 5px;">
+                        <div class="card-body" style="padding: 0;">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group row">
+                                        <div class="table table-bordered table-striped  dt-responsive" id="PendingJRDIV" style="width: 100%;">
+                                            <table id="PendingJRTable" border="0" cellpadding="0" cellspacing="0" class="table table-bordered table-striped dt-responsive" style="width: 100%;">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sr. No.</th>
+                                                        <th>Employee Code</th>
+                                                        <th>Employee Name</th>
+                                                        <th>Department Code</th>
+                                                        <th>Department Name</th>
+                                                        <th>Designation Name</th>
+                                                        <th>Final Authorizer's Status (Department)</th>
+                                                        <th>Final Authorizer's Status (HR)</th>
+                                                        <th>Select</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr *ngFor="let lst of InboxData| paginate: { itemsPerPage:count, currentPage: p }">
+                                                        <td>{{lst.Id}}</td>
+                                                        <td>{{lst.emp_cd}}</td>
+                                                        <td>{{lst.emp_nm}}</td>
+                                                        <td>{{lst.Dept_Cd}}</td>
+                                                        <td>{{lst.Dept_Nm}}</td>
+                                                        <td>{{lst.Desig_Nm}}</td>
+                                                        <td>{{lst.final_auth_cd_dept}}</td>
+                                                        <td>{{lst.final_auth_cd_hr}}</td>
+                                                        <td><input type="button" id="btnSelect" class="btn btn-primary gridButton" value="Select" /></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-10">
+                                        <!--Including the pagination control.-->
+                                        <div class="text-left">
+                                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div style="float: right;">
+                                        <button type="button" class="btn btn-primary" id="btnExit" (click)="btnexit_click()">Exit</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"></div>
+                            </div>				
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+</div> 

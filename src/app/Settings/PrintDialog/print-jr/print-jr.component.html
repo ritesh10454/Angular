@@ -1,0 +1,18 @@
+<div class="modal-header btn-primary">
+    <h4 class="modal-title">{{ title }}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-12">
+            <!-- <div #OutputPrint class="printfont">{{tableHeading}}</div>  -->
+            <div  class="printfont"  [innerHtml] ="tableHeading" ></div> 
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="accept()">{{ btnOkText }}</button>
+    <button type="button" class="btn btn-danger" (click)="decline()">{{ btnCancelText }}</button>
+</div>

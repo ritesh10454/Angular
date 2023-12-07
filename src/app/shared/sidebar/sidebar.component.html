@@ -1,0 +1,76 @@
+<!-- Main Sidebar Container -->
+ <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link" style ="min-height: 56px;"></a>
+ 
+      <!---------Start Navigation Menu show in Left side---------------->
+      <nav class="mt-2"> 
+
+         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item menu-open"><a href="#" class="nav-link active" ><i class="nav-icon fas fa-tachometer-alt"></i><p>Home<i class="right fas fa-angle-left"></i></p></a></li> 
+            <div class="nav-sidebar" *ngFor="let navmenu of menuList |async">
+                <li class="nav-item" >
+                    <a class="nav-link" href="{{navmenu.Url}}" routerLinkActive="active" *ngIf="navmenu.submenus?.length===0">
+                        <i class="fas nav-icon {{navmenu.icon}}"></i>
+                        <p>{{navmenu.Title}}</p>                   
+                    </a> 
+                </li>
+                <li class="nav-item" > 
+                    <a class="nav-link" id="sidebarParentMenu" href="#" routerLinkActive="active" *ngIf="navmenu.submenus?.length!==0"  data-toggle="push-menu" role="button">                   
+                        <i class="fas nav-icon {{navmenu.icon}}"></i>                    
+                        <p>{{navmenu.Title}}<i class="fas fa-angle-left right"></i></p>                 
+                    </a>                          
+                    <ul  class="nav nav-treeview" *ngIf="navmenu.submenus">
+                        <li class="nav-item" *ngFor="let submenu of navmenu.submenus">
+                        <a class="nav-link" href="{{submenu.Url}}" routerLinkActive="active" >
+                            <i class="fas nav-icon {{submenu.icon}}"></i> 
+                            <p>{{submenu.Title}}</p>
+                        </a>                      
+                        </li>
+                    </ul>
+                </li>  
+            </div>
+            <li class="nav-item" >
+                <a class="nav-link" href="/auth/login"  routerLinkActive="active">
+                    <i class="fas nav-icon ion-log-out"></i>
+                    <p>LogOut</p>                   
+                </a> 
+            </li>
+          </ul>
+
+
+   
+          <!-- <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item menu-open"><a href="#" class="nav-link active" ><i class="nav-icon fas fa-tachometer-alt"></i><p>Home<i class="right fas fa-angle-left"></i></p></a></li> 
+            <li class="nav-item"  *ngFor="let navmenu of menuList |async">
+                  <a class="nav-link" href="{{navmenu.Url}}" routerLinkActive="active" *ngIf="navmenu.submenus?.length===0">
+                      <i class="fas nav-icon {{navmenu.icon}}"></i>
+                      <p>{{navmenu.Title}}</p>                   
+                  </a>    
+                  <a class="nav-link" id="sidebarParentMenu" href="#" routerLinkActive="active" *ngIf="navmenu.submenus?.length!==0"  data-toggle="push-menu" role="button">                   
+                      <i class="fas nav-icon {{navmenu.icon}}"></i>                    
+                      <p>{{navmenu.Title}}<i class="fas fa-angle-left right"></i></p>                 
+                  </a>                          
+                  <ul  class="nav nav-treeview"    *ngIf="navmenu.submenus">
+                      <li class="nav-item" *ngFor="let submenu of navmenu.submenus">
+                        <a class="nav-link" href="{{submenu.Url}}" routerLinkActive="active" >
+                          <i class="fas nav-icon {{submenu.icon}}"></i> 
+                          <p>{{submenu.Title}}</p>
+                      </a>                      
+                      </li>
+                    </ul>
+              </li>
+              <li class="nav-item" >
+                  <a class="nav-link" href="/auth/login">
+                      <i class="fas nav-icon ion-log-out"></i>
+                      <p>LogOut</p>                   
+                  </a> 
+              </li>
+            </ul>        -->
+
+       
+            
+
+
+      </nav>    
+   </aside>

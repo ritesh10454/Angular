@@ -1,0 +1,110 @@
+<div class="row">
+    <div class ="col-12">
+        <h2 align="center" style="font-family:Arial, Helvetica, sans-serif; color: #FFFFFF;text-decoration: underline;padding-bottom: 10px;font-weight: 900;letter-spacing: 0.162em;line-height: 1;font-size: 2.5rem;">ONLINE JOB RESPONSIBILITY MODULE</h2>
+    </div>
+
+</div>
+<div class ="row">
+    <div class ="col-12">
+        <span style="font-family: Verdana; font-size: x-large; text-align: left; height: 3%; color: #fff; font-weight: 700; border-bottom-style: solid; border-bottom-color: #fff;border-bottom-width: 1px;"></span>
+    </div>
+</div>
+<div class ="row">
+    <div class ="col-12">
+        <span id="lblSts" style="width:200px;font-family: 'Century Gothic';font-size: small; font-weight: 700"></span>
+    </div>
+</div>
+
+<div class ="row">
+    <div class="col-8">
+        <div class ="form-group">
+            <p>
+                Job Responsibility Module takes the fuss and time-consuming paperwork out of applying for, and
+                authorising, any of Job Responsibility. It gives in your company access to a fast, efficient, 
+                online system, which they can use no matter where they are, so booking and approving time off couldn’t be easier.</p>
+            <p style="font-family: calibri; font-size: x-large; margin-left: 3%;">
+                <img src="assets/Images/people.png"  alt="IOLCP" style="height:55px;margin-right: 10px;" />
+                Simple and Easy to use for Employees
+            </p>   
+        </div>
+        <div class ="form-group">
+                <ul>
+                    <li>Request for job responsibility  lieu quickly and easily online.</li>
+                    <li>Find out who’s already booked time off for your Issuing Item.</li>
+                    <li>View the current status of your request and easily update or cancel job responsibility.</li>
+                    <li>Carry untaken days over to the following year (if part of your company policy.)</li>
+                </ul>        
+        </div>
+        <div class ="form-group">
+                <p style="font-family: calibri; font-size: x-large; margin-left: 3%;">
+                    <img src="assets/Images/people.png" alt="IOLCP" style="height:55px;margin-right: 10px;"/>Powerful Monitoring Tool for Managers.
+                </p>
+                <ul>
+                    <li>Record and monitor all of job responsibility departmentwise<span style="font-size:12.0pt;line-height:115%;font-family:'Times New Roman', Times, serif;"></span></li>
+                    <li>Keep accurate, up-to-date records of job responsibilities for every employee.</li>
+                    <li>Cut down on wasted time, effort and paperwork and eliminate admin errors.</li>
+                    <li>Set a maximum number of days that can be carried job responsibility detail in a Year , according
+                        to your company policy.</li>
+                    <li>Establish a single, consistent system for applying for job responsibility across your
+                        company. </li>
+                </ul>
+                <p style="font-family: calibri; font-size: x-large; margin-left: 3%;">
+                    <img src="assets/Images/people.png" alt="IOLCP" style="height:55px;margin-right: 10px;"/>
+                    See for Yourself
+                    <ul>
+                        <li>Why not experience Job Responsibility for yourself and see how effortless it makes the
+                            process of managing and monitoring employee.</li>
+                        <li>Instant update of job responsibility </li>
+
+                    </ul>
+                    <!-- </p>                  -->
+        </div>
+
+    </div>
+    <div class ="col-4">
+        <div class="container">
+            <div class="card card-container">            
+                <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+                <img id="profile-img" alt ="" class="profile-img-card" src="assets/Images/avatar_2x.png" />
+                <p id="profile-name" class="profile-name-card"></p>
+                <div  [formGroup] ="LoginForm"   class="form-signin" >
+                    <span id="reauth-email" class="reauth-email"></span> 
+                    <input formControlName="txtusrnam" type="text" class="form-control" placeholder="User Name" required tabindex="1"/>
+                    <input formControlName="txtusrpwd" type="password" class="form-control" placeholder="Password" required tabindex="2"/>
+                    <input type="button" id="btnSignIn" class="btn btn-lg btn-primary btn-block btn-signin" tabindex="3" value="SignIn" (click)="onSignIn()"/>
+                    <span id="lblMessage" style="color:Red;font-weight:bold;">{{errorMsg}}</span>
+                </div>
+                <!-- <form id="Form1" class="form-signin" runat="server">
+                    <span id="reauth-email" class="reauth-email"></span> -->
+            </div><!-- /card-container -->
+        </div><!-- /container -->    
+     </div>
+
+</div>
+<div class ="row">
+    <div class="col-12">
+        <div class="form-group">
+            <div style="font-family: calibri;  color: #fff;">
+                <strong>This site has visited
+                <label id="lblhitcou" Style="font-style: italic"></label> times.</strong>
+            </div>
+                <marquee behavior="Alternate" scrolldelay="5" direction="right" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" >
+                <p style="font-weight: 400; font-family: verdana; ">  
+                    For More Details, please Contact IT Department at 1807,1808,1809.
+                </p></marquee>                          
+        </div>
+    </div>
+</div>
+<div class ="row">
+    <div class ="col-12">
+<div id="footer">
+    <div style="padding: 0px; margin: 0px; color: #ffff; font-family: verdana; font-size: small;font-weight: bold;">
+<br />
+Copyright (C) Commercial 2022 IOLCP DHAULA, BARNALA. All rights reserved.
+    </div>
+    </div>
+    </div>
+</div>
+<!-- </div>  -->
+
+

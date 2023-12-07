@@ -1,0 +1,223 @@
+<div class="content-wrapper">
+    <!-- Breadcrumb -->
+    <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2"  id="libreadcrumbItems">
+            <div class="col-sm-6">
+              <h1 class="m-0" id="headingcurrMenu" style="font-size: 1.3rem;" >{{headingMenu}}</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#"  id="lblmainMenu"></a>{{mainMenu}}</li>
+                <li class="breadcrumb-item active">{{currMenu}}</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Breadcrumb -->
+
+      <section class="content">
+        <div class="container-fluid">
+            <div [formGroup]="jrEmployeeForm">
+                <div class="row" id="JREntryDetail">
+                    <div class="col-md-12">
+                        <div class="card card-primary bodyMargin">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    Job Description</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row" id="pnlctrl">
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">
+                                                Select Department</label>
+                                            <div class="col-sm-6">
+                                                <select formControlName="Department"  class="form-control select2 myTab" tabindex="-1" (change)="drpDepartment_IndexChange($event)" autocomplete="off">
+                                                    <option value="0" selected>--Select--</option>
+                                                    <option *ngFor="let dept of jrDepartment" [value]="dept.dept_cd">{{dept.dept_nm}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">
+                                                Select Employee</label>
+                                            <div class="col-sm-6">
+                                                <select formControlName="Employee" class="form-control select2 myTab" tabindex="-1" (change)="drpEmployee_IndexChange($event)" autocomplete="off">
+                                                    <option value="0" selected>--Select--</option>
+                                                    <option *ngFor="let emp of JrEmployee" [value]="emp.emp_cd">{{emp.emp_nm}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">
+                                                Employee Name</label>
+                                            <div class="col-sm-6">
+                                                <input formControlName="emp_nm"  readonly class="form-control-plaintext TextAlign myTab" placeholder="Employee Name" required  />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">
+                                                Employee Code</label>
+                                            <div class="col-sm-6">
+                                                <input formControlName="emp_cd" readonly class="form-control-plaintext TextAlign myTab" placeholder="Employee code" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">
+                                                Designation / Grade</label>
+                                            <div class="col-sm-6">
+                                                <input formControlName="desig_nm" readonly class="form-control-plaintext TextAlign myTab" placeholder="Designation Name"  required  />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">
+                                                Date of Joining</label>
+                                            <div class="col-sm-6">
+                                                <input formControlName="doj" readonly class="form-control-plaintext TextAlign myTab" placeholder="Date of Joining" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-primary bodyMargin">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    JR Detail
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <textarea formControlName="jr_detail" [disabled]="jrDetailDisable"  class="summernote col-md-12">Place <em>your</em> <u>text</u> <strong>here</strong> </textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" id="revision_no">
+                                            <div class="col-6">
+                                                <div class="col-sm-12 col-md-12">
+                                                    <div class="form-group row">
+                                                        <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">
+                                                            Revision No</label>
+                                                        <div class="col-sm-6">
+                                                            <input formControlName="revision_no" class="form-control myTab" placeholder="Revision No"
+                                                                ondrop="return false;" onpaste="return false;" onkeydown="return (event.keyCode!=13);"
+                                                                onkeypress="return isNumberfloatKey(event,this,0);" onchange="txtRevisionNo_Change()" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="col-sm-12 col-md-12">
+                                                    <div class="form-group row">
+                                                        <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">
+                                                            Supersede No</label>
+                                                        <div class="col-sm-6">
+                                                            <input formControlName="supersede_no" class="form-control" placeholder="Supersede No"
+                                                                ondrop="return false;" onpaste="return false;" onkeydown="return (event.keyCode!=13);"
+                                                                onkeypress="return isNumberfloatKey(event,this,0);" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="col-sm-12 col-md-12" *ngIf="effectivedtShow"  id="effectiveDt">
+                                                    <div class="form-group row">
+                                                        <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">
+                                                            Effective Date</label>
+                                                        <div class="col-sm-6">
+                                                            <input formControlName="revision_date" class="form-control TextAlign datepicker myTab" required placeholder="Effective Date"/>
+                                                        </div>
+                                                    </div>
+                                                </div>  
+                                                <div class="col-sm-12 col-md-12">
+                                                    <div class="form-group row">
+                                                        <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">
+                                                            Revision</label>
+                                                        <div class="col-sm-6">
+                                                            <textarea formControlName="reason" class="form-control myTab" required placeholder="Reason For Revision"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                  
+                                            </div>
+                                        </div>
+                                            <!-- </div> -->
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-primary bodyMargin">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    JR Revision History
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group row">
+                                            <!-- <div class="table table-bordered table-striped  dt-responsive" id="JRRevisionDIV" style="width: 100%;"> -->
+                                                <!--style="overflow:scroll;"-->
+                                                <table id="JRRevisionTable" [border]="0" cellpadding="0" cellspacing="0" class="table table-bordered table-striped dt-responsive" 
+                                                    style="width: 100%;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Sr No</th>
+                                                            <th>Revision No</th>
+                                                            <th class="revisionDate">Effective Date</th>
+                                                            <th>Supersede No</th>
+                                                            <th>Reason</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr *ngFor="let lst of revisionDetail">
+                                                            <td>{{lst.catg_cd}}</td>
+                                                            <td>{{lst.revision_no}}</td>
+                                                            <td class="revisionDate">{{lst.revision_date}}</td>
+                                                            <td>{{lst.supersede_no}}</td>
+                                                            <td>{{lst.reason}}</td>
+                                                        </tr>
+                                                    </tbody>                                                    
+                                                </table>
+                                            <!-- </div> -->
+                                            <span id="Label1" Style="text-align: center; color: Red; font-weight: bold;"></span>
+                                        </div>
+                                        <div class="row" style="margin-top: 10px;">
+                                            <div class="col-sm-12">
+                                                <div align="center" >
+                                                    <button type="button" class="btn btn-primary btnMargin" id="btnCheck" style="display: none;" disabled >Validate</button>
+                                                    <button type="button" class="btn btn-primary btnMargin" *ngIf="saveButtonShow" [disabled]="btnsaveDisabled" id="btnSave" (click)="btnSave_Click()">{{btnSaveText}}</button>
+                                                    <button type="button" class="btn btn-primary btnMargin" *ngIf="actionButtonShow" [disabled]="btnActionDisabled" id="btnaction" (click)="btnaction_Click()" >{{btnActionText}}</button>
+                                                    <button type="button" class="btn btn-primary btnMargin" *ngIf="printButtonShow" [disabled]="btnPrintDisabled" id="btnPrint" (click)="btnPrint_Click()"  >Print</button>
+                                                    <button type="button" class="btn btn-primary btnMargin" *ngIf="cancelButtonShow" [disabled]="btnCancelDisabled" id="btncancel" (click)="btncancel_Click()">Back to Inbox</button>
+                                                    <button type="button" class="btn btn-primary btnMargin" id="Btnexit" (click)="btnexit_click()">Exit</button>
+                                                    <input type="text" style="display:none;" id="TextBox1"/>
+                                                </div>
+                                            </div>
+                                        </div>                                         
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </section>
+</div>

@@ -1,0 +1,173 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "JRAngularModule": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:component": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/jrangular-module",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "node_modules/admin-lte/Styles/googlefont.css",
+              "node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css",
+              "node_modules/admin-lte/Styles/IonIcon/ionicons.min.css",
+              "node_modules/admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css",
+              "node_modules/admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css",
+              "node_modules/admin-lte/plugins/jqvmap/jqvmap.min.css",          
+              "node_modules/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
+              "node_modules/admin-lte/plugins/daterangepicker/daterangepicker.css",
+              "node_modules/admin-lte/plugins/summernote/summernote-bs4.min.css",
+              "node_modules/admin-lte/plugins/datatables-fixedcolumns/css/fixedColumns.bootstrap4.min.css",
+              "node_modules/admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css",
+              "node_modules/admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css",
+              "node_modules/admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css",
+              "node_modules/admin-lte/dist/css/adminlte.min.css",
+              "node_modules/admin-lte/plugins/toastr/toastr.min.css",
+              "node_modules/admin-lte/Styles/JQuery/jquery-ui.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              {"input": "node_modules/admin-lte/plugins/jquery/jquery.min.js","inject": true,"bundleName": "jquery.min"},
+              {"input": "node_modules/admin-lte/plugins/jquery-ui/jquery-ui.min.js","inject": true,"bundleName": "jquery-ui.min"},
+              {"input": "node_modules/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js","inject": true,"bundleName": "bootstrap.bundle.min"},
+              {"input": "node_modules/admin-lte/plugins/chart.js/Chart.min.js","inject": true,"bundleName": "Chart.min"},
+              {"input": "node_modules/admin-lte/plugins/sparklines/sparkline.js","inject": true,"bundleName": "sparkline"},
+              {"input": "node_modules/admin-lte/plugins/jqvmap/jquery.vmap.min.js","inject": true,"bundleName": "jquery.vmap.min"},
+              {"input": "node_modules/admin-lte/plugins/jqvmap/maps/jquery.vmap.usa.js","inject": true,"bundleName": "jquery.vmap.usa"},
+              {"input": "node_modules/admin-lte/plugins/jquery-knob/jquery.knob.min.js","inject": true,"bundleName": "jquery.knob.min"},
+              {"input": "node_modules/admin-lte/plugins/daterangepicker/daterangepicker.js","inject": true,"bundleName": "daterangepicker"},
+              {"input": "node_modules/admin-lte/plugins/summernote/summernote-bs4.min.js","inject": true,"bundleName": "summernote-bs4.min"},
+              {"input": "node_modules/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js","inject": true,"bundleName": "jquery.overlayScrollbars"},
+              {"input": "node_modules/admin-lte/plugins/datatables/jquery.dataTables.min.js","inject": true,"bundleName": "jquery.dataTables.min"},
+              {"input": "node_modules/admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js","inject": true,"bundleName": "dataTables.bootstrap4.min"},
+              {"input": "node_modules/admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js","inject": true,"bundleName": "dataTables.responsive.min"},
+              {"input": "node_modules/admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js","inject": true,"bundleName": "responsive.bootstrap4.min"},
+              {"input": "node_modules/admin-lte/plugins/datatables-buttons/js/dataTables.buttons.min.js","inject": true,"bundleName": "dataTables.buttons.min"},
+              {"input": "node_modules/admin-lte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js","inject": true,"bundleName": "buttons.bootstrap4"},
+              {"input": "node_modules/admin-lte/plugins/jszip/jszip.min.js","inject": true,"bundleName": "jszip.min"},
+              {"input": "node_modules/admin-lte/plugins/pdfmake/pdfmake.min.js","inject": true,"bundleName": "pdfmake.min"},
+              {"input": "node_modules/admin-lte/plugins/pdfmake/vfs_fonts.js","inject": true,"bundleName": "vfs_fonts"},
+              {"input": "node_modules/admin-lte/plugins/datatables-buttons/js/buttons.html5.min.js","inject": true,"bundleName": "buttons.html5.min"},
+              {"input": "node_modules/admin-lte/plugins/datatables-buttons/js/buttons.print.min.js","inject": true,"bundleName": "buttons.print.min"},
+              {"input": "node_modules/admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js","inject": true,"bundleName": "buttons.colVis.min"},
+              {"input": "node_modules/admin-lte/plugins/datatables-fixedcolumns/js/dataTables.fixedColumns.min.js","inject": true,"bundleName": "dataTables.fixedColumns.min"},
+              {"input":"node_modules/admin-lte/plugins/toastr/toastr.min.js","inject": true,"bundleName": "toastr.min"},
+              {"input": "node_modules/admin-lte/dist/js/adminlte.js", "inject": true,"bundleName": "adminlte"}
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "4mb", 
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "JRAngularModule:build:production"
+            },
+            "development": {
+              "browserTarget": "JRAngularModule:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "JRAngularModule:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}

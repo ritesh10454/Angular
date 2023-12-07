@@ -1,0 +1,106 @@
+<div class="content-wrapper">
+    <!-- Breadcrumb -->
+    <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2"  id="libreadcrumbItems">
+            <div class="col-sm-6">
+              <h1 class="m-0" id="headingcurrMenu" style="font-size: 1.3rem;" >{{headingMenu}}</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#"  id="lblmainMenu"></a>{{mainMenu}}</li>
+                <li class="breadcrumb-item active">{{currMenu}}</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Breadcrumb -->
+
+      <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class ="col-md-12">
+                    <div class="card card-primary bodyMargin">
+                        <div class="card-header">
+                            <h3 class="card-title">JR Access Rights</h3>
+                        </div>
+                        <div class="card-body bodyMargin">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-8"></div>
+                                <div class="col-sm-12 col-md-2">
+                                    <div class="form-group row">
+                                        <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">Date</label>
+                                        <div class="col-sm-6">
+                                            <input  type="text" class="form-control-plaintext TextAlign" [value]="txtDate" readonly/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-2">
+                                    <div class="form-group row">
+                                        <label for="staticEmail" class="col-sm-6 col-form-label LabelAlign">Time</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control-plaintext TextAlign" [value]="currTime" readonly/>
+                                        </div>
+                                    </div>
+                                </div>                
+                            </div>
+                        </div> 
+                    </div>  
+
+
+                    <div class="card card-primary bodyMargin">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group row">
+                                        <table id="JRAccessRightTable" border="0" cellpadding="0" cellspacing="0" class="table table-bordered table-striped dt-responsive" style="width: 100%;">
+                                            <thead>
+                                                <tr><th rowspan="2" colspan="1" style="text-align:center;vertical-align: top;">Access Rights</th><th rowspan="1" colspan="5" style="text-align:center;">Authorization Levels</th></tr>
+                                                <tr><th>Admin</th><th>HR</th><th>Final Authority</th><th>First Authority</th><th>User</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let itm of objAccesrights">
+                                                    <td>{{itm.accessRights}}</td>
+                                                    <td><img src="{{itm.isAdmin}}" style="width: 29px;position: relative;margin-bottom: 0px;opacity: 0.4;margin-left: 61px;"> </td>
+                                                    <td><img src="{{itm.isHR}}" style="width: 29px;position: relative;margin-bottom: 0px;opacity: 0.4;margin-left: 61px;"> </td>
+                                                    <td><img src="{{itm.isFinalAuth}}" style="width: 29px;position: relative;margin-bottom: 0px;opacity: 0.4;margin-left: 61px;"> </td>
+                                                    <td><img src="{{itm.isFirstAuth}}" style="width: 29px;position: relative;margin-bottom: 0px;opacity: 0.4;margin-left: 61px;"> </td>
+                                                    <td><img src="{{itm.isUser}}" style="width: 29px;position: relative;margin-bottom: 0px;opacity: 0.4;margin-left: 61px;"> </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div style="float: right;">
+                                        <button type="button" class="btn btn-primary" id="btnExit" (click)="btnexit_click()">Exit</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"></div>
+                            </div>				
+                        </div>
+                    </div>
+                </div>
+            </div>          
+            
+            
+            <div class ="row">
+                <div class ="col">
+                    <span style="color:#ff0000; font-weight:bold;">{{errorMsg}}</span>
+                    <div style="display: none;">
+                        <span>{{span_empcd}}</span>
+                        <span>{{span_empnam}}</span>
+                        <span>{{span_dept}}</span>
+                        <span>{{span_desig}}</span>   
+                        <span>{{span_UserID}}</span>   
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+</div>

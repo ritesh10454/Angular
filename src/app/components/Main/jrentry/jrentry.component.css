@@ -1,0 +1,156 @@
+.cardHeight
+{
+    min-height: 320px;
+    max-height: 420px;
+}
+
+/* #loader2 {  
+position: fixed;  
+left: 0px;  
+top: 0px;  
+opacity:0.9;
+width: 100%;  
+height: 100%;  
+z-index: 9999;  
+background: rgb(201, 201, 201) url('/assets/AdminLte/dist/img/waiting.gif') no-repeat 50% 50%;
+}   */
+
+.inner:hover {
+background-color:Black !important;
+}
+
+.newLi
+{
+    color: #0000ff; text-align: left; text-decoration: none; font-size: medium;
+                            font-weight: 500;
+}
+
+.cardRow
+{
+    margin-top: -67px;
+}
+
+.cardHeaderPrimary
+{
+    padding-left: 2px;
+}
+
+.LabelAlign
+{
+    text-align: right;
+}
+
+.TextAlign
+{
+    text-align: left;
+}
+/* .loader
+{
+    position: fixed;
+    left: 0px;
+    opacity: 0.9;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgb(201, 201, 201) url('AdminLte/dist/img/waiting.gif') no-repeat 50% 50%;
+} */
+
+th, td
+{
+    white-space: nowrap;
+}
+
+  input[type=text]:focus, input[type=password]:focus, textarea:focus
+{
+    background-color:lightyellow;
+    border: 1px solid #ccc;
+}   
+
+
+.wrapContent
+{
+    white-space: normal !important;
+}
+
+.controlSize
+{
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+}
+
+.dropDowntext
+{
+    padding-top: 0;
+}
+
+.tabcolor
+{
+    border-color: #C80000;
+}
+
+.tdPadding
+{
+    padding-top: -0.625rem;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-family: "Calibri";
+    margin-top: -5px !important;
+    height: calc(2.25rem + 2px);
+}
+
+.note-editable
+{
+    height: 250px !important;
+}
+
+.modal-full {
+    min-width: 100%;
+    margin: 0;
+}
+
+.modal-full .modal-content {
+    min-height: 100%;
+}
+
+.modal-dialog {
+    -webkit-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 40%;
+    margin: 0 auto;
+}
+
+.buttonRight
+{
+    margin-right: 5px;
+}
+
+.revisionDate
+{
+    display:none;
+}
+
+table thead tr 
+{
+    background-color: #007bff;
+    color:#fff;
+    font-size:12px;
+} 
+.btnMargin
+{
+   margin-right: 5px;
+}
+
+.bodyMargin
+{
+   padding-bottom:5px;
+}
+
+
+.d-block {
+    top:40%;
+}
+
+
+

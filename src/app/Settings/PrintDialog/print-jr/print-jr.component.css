@@ -1,0 +1,115 @@
+.modal-full {
+    min-width: 100%;
+    margin: 0;
+}
+
+.modal-full .modal-content {
+    min-height: 100%;
+}
+
+.modal-dialog {
+    -webkit-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 40% !important;
+    margin: 0 auto;
+}
+
+.d-block {
+    top:40%;
+}
+
+
+.page {
+    page-break-after: always;
+  }
+
+  @page {
+    margin: 15mm
+  }
+
+  @media print {
+     thead {display: table-header-group;} 
+     tfoot {display: table-footer-group;}
+ 
+     button {display: none;}
+ 
+     body {margin: 0;}
+      .page-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+       /*  border-top: 1px solid black; /* for demo */
+      /*  background: yellow; /* for demo */
+      }
+
+      .page-header {
+        position: fixed;
+        top: 0mm;
+        width: 100%;
+       /*  border-bottom: 1px solid black; /* for demo */
+       /* background: yellow; /* for demo */
+      }   
+      .page-header, .page-header-space {
+        height: 100px;
+      }
+
+      .page-footer, .page-footer-space {
+        height: 140px;
+      }
+  }
+
+
+  @media print {
+    thead { display: table-header-group; top: 20mm; height : 20mm !important; }
+    tfoot { display: table-footer-group; bottom : 20mm; height : 50mm !important; margin-bottom:0px;  }
+    tbody { display: table-row-group; }
+    @page :thead { display: none;}  
+    @page :tfoot { display: none; }
+    @page { margin-top: 0; margin-bottom: 0; }
+    }
+
+
+    th, td {
+        white-space: nowrap;
+        font-size:1.1rem;
+    }
+    
+
+    .ButtonRightAlign
+    {
+        float:right;
+    }
+     
+    .TextAlign
+    {
+        text-align:left;
+    }         
+        
+    table.dataTable thead tr 
+    {
+        background-color: #007bff;
+        font-size:1.1rem;
+        color:#fff;
+    }   
+    
+     table.dataTable 
+     {
+        margin: 0 !important;
+        font-family: "Calibri"; 
+        font-size:1.1rem;
+    }    
+    .gridButton
+    {
+        font-family: "Calibri"; 
+        font-size:12px;
+    }  
+
+    tbody, td, tfoot, th, thead, tr {
+        border-color: inherit;
+        border-style: solid;
+        border: 1px solid !important;
+      }
+
+
+    
